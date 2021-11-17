@@ -25,13 +25,13 @@ package com.cst.demo3;
  */
 public class Demo01InnerClass {
     public static void main(String[] args) {
-        Body body = new Body();
+        Body body = new Body();  //外部类的对象
         body.setName("Jenny");
         // 通过外部类的对象，调用外部类的方法，里面间接的使用内部类Heart
         body.methodBody();
         System.out.println("=============");
 
-        Body.Heart heart = new Body().new Heart();
+        Body.Heart heart = new Body().new Heart();  //直接调用内部类
         heart.beat();
     }
 
